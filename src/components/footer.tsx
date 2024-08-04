@@ -26,18 +26,15 @@ export function Footer() {
   }
 
   return (
-    <footer className="dark mt-auto w-full border-t bg-card px-3 py-4 text-sm text-muted-foreground">
-      <div className="grid grid-cols-2 items-center md:grid-cols-3">
-        <span className="whitespace-nowrap md:col-start-2 md:justify-self-center">
+    <footer className="dark mt-auto border-t bg-card px-3 py-4 text-sm text-muted-foreground">
+      <div className="flex justify-between items-center">
+        <span>
           Made by{" "}
-          <span aria-label="wizard" role="img">
-            🧙
-          </span>{" "}
-          <a className="font-semibold" href="https://mattpryer.com" rel="noopener noreferrer" target="_blank">
+          <a href="https://mattpryer.com" target="_blank" rel="noopener noreferrer" className="font-semibold">
             Matt Pryer
           </a>
         </span>
-        <div className="flex gap-2 justify-self-end">
+        <div className="flex gap-2">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
