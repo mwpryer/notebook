@@ -15,6 +15,9 @@ export async function bundle(rawCode: string) {
       plugins: [unpkgPathPlugin(), fetchPlugin(rawCode)],
       jsxFactory: "__React__.createElement",
       jsxFragment: "__React__.Fragment",
+      define: {
+        "process.env.NODE_ENV": "'development'",
+      },
     })
     return { code: result.outputFiles[0].text, error: "" }
   } catch (err) {
