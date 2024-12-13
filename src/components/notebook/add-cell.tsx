@@ -15,7 +15,7 @@ export function AddCell({ prevCellId }: AddCellProps) {
     <div className="flex justify-center">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger>
+          <TooltipTrigger asChild>
             <Button
               size="icon"
               variant="secondary"
@@ -34,7 +34,7 @@ export function AddCell({ prevCellId }: AddCellProps) {
       <div className="w-px bg-border"></div>
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger>
+          <TooltipTrigger asChild>
             <Button
               size="icon"
               variant="secondary"
