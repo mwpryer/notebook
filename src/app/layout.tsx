@@ -5,6 +5,7 @@ import { GeistMono } from "geist/font/mono"
 import "../styles/globals.css"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/providers/theme"
+import { TooltipProvider } from "@/components/ui/tooltip"
 import { NotebookProvider } from "@/components/providers/notebook"
 import { Footer } from "@/components/footer"
 
@@ -13,10 +14,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en" className={cn(GeistSans.variable, GeistMono.variable)} suppressHydrationWarning>
       <body className="flex min-h-screen flex-col">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <NotebookProvider>
-            <main className="flex flex-grow flex-col">{children}</main>
-            <Footer />
-          </NotebookProvider>
+          <TooltipProvider>
+            <NotebookProvider>
+              <main className="flex flex-grow flex-col">{children}</main>
+              <Footer />
+            </NotebookProvider>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

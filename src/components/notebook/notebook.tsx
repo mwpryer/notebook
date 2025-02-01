@@ -20,7 +20,7 @@ export function Notebook() {
   }, [dispatch])
 
   return (
-    <div className="p-1 pb-2">
+    <div className="p-1 pb-12">
       <CellList cells={cells} />
     </div>
   )
